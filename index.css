@@ -1,0 +1,52 @@
+body {
+font-family: Arial, sans-serif;
+height: 100vh;
+
+}
+
+
+form {
+width: 300px;
+
+}
+
+input {
+    border: none;
+}
+
+input, button {
+    padding: 10px;
+    width: -webkit-fill-available;
+}
+
+button { 
+ cursor: pointer;
+ margin-bottom: 10px;
+
+
+}
+
+div label {
+    color: #0090ff;
+}
+
+
+
+/* --e-global-color-primary: #494949;
+    --e-global-color-secondary: #fff;
+    --e-global-color-text: #000;
+    --e-global-color-accent: #c8f71c; */
+
+
+
+
+
+
+ /* Color Theme Swatches in Hex 
+.Crevasse-1-hex { color: #B4BEC9; }
+.Crevasse-2-hex { color: #159A9C; }
+.Crevasse-3-hex { color: #002333; }
+.Crevasse-4-hex { color: #DEEFE7; }
+.Crevasse-5-hex { color: #FFFFFF; }
+
+*/

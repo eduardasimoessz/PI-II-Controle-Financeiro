@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="shortcut icon" href="/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav nav-pills nav-justified">
+        <a class="nav-item nav-link active" href="#" onclick="showTab('form-tab')">Formulário</a>
+        <a class="nav-item nav-link" href="#" onclick="showTab('transactions-tab')">Transações Recentes</a>
+        <a class="nav-item nav-link" href="#" onclick="showTab('inventory-tab')">Controle de Estoque</a>
+        <button type="button" class="clear" onclick="logout()">Sair</button>
+    </nav>
+
+    <div id="form-tab" class="tab-content active">
+        <h2>Formulário de Transações</h2>
+        <form id="transaction-form">
+            <label for="transaction-type">Tipo de Transação:</label>
+            <select id="transaction-type">
+                <option value="buy">Compra</option>
+                <option value="sell">Venda</option>
+            </select>
+
+            <label for="model">Modelo:</label>
+            <select id="model">
+                <option value="iPhone 14">iPhone 14</option>
+                <option value="iPhone 14 Pro">iPhone 14 Pro</option>
+                <option value="iPhone 14 Plus">iPhone 14 Plus</option>
+                <option value="iPhone 14 Pro Max">iPhone 14 Pro Max</option>
+                <option value="iPhone 15">iPhone 15</option>
+                <option value="iPhone 15 Pro">iPhone 15 Pro</option>
+                <option value="iPhone 15 Plus">iPhone 15 Plus</option>
+                <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+            </select>
+
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <p>Preço: R$ <span id="price">0.00</span></p>
+
+            <button type="submit">Registrar Transação</button>
+        </form>
+
+        <h2>Resumo Financeiro</h2>
+        <p>Entradas: R$ <span id="total-incomes">0.00</span></p>
+        <p>Saídas: R$ <span id="total-expenses">0.00</span></p>
+        <p>Saldo: R$ <span id="balance">0.00</span></p>
+    </div>
+
+    <div id="transactions-tab" class="tab-content">
+        <h2>Transações Recentes</h2>
+        <ul id="transactions-list"></ul>
+    </div>
+
+    <div id="inventory-tab" class="tab-content">
+        <h2>Controle de Estoque</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Modelo</th>
+                    <th>Quantidade em Estoque</th>
+                    <th>Preço Unitário (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>iPhone 14</td>
+                    <td>4</td>
+                    <td>7599</td>
+                </tr>
+                <tr>
+                    <td>iPhone 14 Pro</td>
+                    <td>3</td>
+                    <td>9499</td>
+                </tr>
+                <tr>
+                    <td>iPhone 14 Plus</td>
+                    <td>8</td>
+                    <td>8599</td>
+                </tr>
+                <tr>
+                    <td>iPhone 14 Pro Max</td>
+                    <td>6</td>
+                    <td>10499</td>
+                </tr>
+                <tr>
+                    <td>iPhone 15</td>
+                    <td>7</td>
+                    <td>8599</td>
+                </tr>
+                <tr>
+                    <td>iPhone 15 Pro</td>
+                    <td>3</td>
+                    <td>10499</td>
+                </tr>
+                <tr>
+                    <td>iPhone 15 Plus</td>
+                    <td>8</td>
+                    <td>9599</td>
+                </tr>
+                <tr>
+                    <td>iPhone 15 Pro Max</td>
+                    <td>6</td>
+                    <td>11499</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+<script src="/server.js"></script>
+<script src="/firebase.init.js"></script>
+<script src="/pages/home/home.js"></script>
+<script src="/auth-guard.js"></script>
+<script src="/loading.js"></script>
+</body>
+</body>
+</html>
+
+    
+
